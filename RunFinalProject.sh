@@ -25,6 +25,10 @@ echo "EXPOSE 80" >> Dockerfile
 docker build . -t my_server:v1
 docker run -p 1234:80 my_server:v1
 
+xcrun simctl boot 24B6A9DD-B2D3-4C47-942D-2FE5C0D2C058
+open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+xcrun simctl openurl booted "http://localhost:1234"
+
 
 
 
