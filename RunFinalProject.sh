@@ -15,4 +15,12 @@ open -a Safari http://devi0087.hopto.org
 /Users/komaldevi/Library/Android/sdk/platform-tools/adb shell am start -a "android.intent.action.VIEW" -d "http://devi0087.hopto.org"
 
 
+echo "FROM ubuntu:latest" >> Dockerfile
+echo "RUN apt update && apt install -y nginx && apt install -y unzip" >> Dockerfile
+echo "COPY Archive.zip  /var/www/html" >> Dockerfile
+echo "WORKDIR /var/www/html" >> Dockerfile
+# echo "RUN unzip Archive.zip" >> Dockerfile
+echo "CMD [\"/usr/sbin/nginx\", \"-g\" , \"daemon off;\"]" >> Dockerfile
+echo "EXPOSE 80" >> Dockerfile
+
 
