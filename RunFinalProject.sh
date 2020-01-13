@@ -22,5 +22,6 @@ echo "WORKDIR /var/www/html" >> Dockerfile
 # echo "RUN unzip Archive.zip" >> Dockerfile
 echo "CMD [\"/usr/sbin/nginx\", \"-g\" , \"daemon off;\"]" >> Dockerfile
 echo "EXPOSE 80" >> Dockerfile
+docker build . -t my_server:v1
 
 
