@@ -23,6 +23,7 @@ echo "WORKDIR /var/www/html" >> Dockerfile
 echo "CMD [\"/usr/sbin/nginx\", \"-g\" , \"daemon off;\"]" >> Dockerfile
 echo "EXPOSE 80" >> Dockerfile
 docker build . -t my_server:v1
+docker run -p 1234:80 my_server:v1
 
 
 
