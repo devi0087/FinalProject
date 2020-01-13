@@ -25,3 +25,5 @@ echo "EXPOSE 80" >> Dockerfile
 docker build . -t my_server:v1
 
 
+
+
